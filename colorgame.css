@@ -1,0 +1,17 @@
+body{
+  background: #000;
+}
+.rect{
+  background: green;
+  width:30%;
+  padding-top: 30%;
+  margin:1.667%;
+  float: left;
+}
+.container{
+margin: 0 auto;
+max-width: 40%;
+}
+h1{
+  color:white;
+}
