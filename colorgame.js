@@ -7,4 +7,14 @@ for(var i=0;i<6;i++){
 }
 y=document.querySelectorAll(".rect");
 pickedcolor=x[Math.floor(Math.random()*6)];
-y.forEach((i,ind)=>{i.style.backgroundColor=x[ind];});
+putQuestion=document.getElementById("question");
+putQuestion.textContent=pickedcolor.toUpperCase();
+y.forEach((i,ind)=>{i.style.backgroundColor=x[ind];
+i.addEventListener('click',()=>{
+  console.log(pickedcolor.toUpperCase());
+  console.log(i.style.backgroundColor);
+  if(pickedcolor.toUpperCase()===i.style.backgroundColor.toUpperCase())
+  {i.style.visibility='hidden';
+}
+});
+});
