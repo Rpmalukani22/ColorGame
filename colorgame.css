@@ -18,10 +18,20 @@ max-width: 40%;
 h1{
   color:white;
   text-align: center;
+  height:100px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 #decorate{
   text-align: center;
+  background: white;
+  height: 30px;
+  color:black;
 }
 .level{
-  margin: 5px;
+  margin:0 5px 0 5px;
+  height: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
