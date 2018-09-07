@@ -9,6 +9,7 @@ body{
   padding-top: 30%;
   margin:1.667%;
   float: left;
+  border-radius: 25px;
 }
 .container{
 margin: 0 auto;
