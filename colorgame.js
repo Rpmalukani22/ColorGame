@@ -28,7 +28,7 @@ i.addEventListener('click',()=>{
   {
   //message success
   console.log(n);
-  message.textContent="Correct!!"
+  message.textContent="Correct!!Select level to play again."
   for(let k=0;k<6;k++){
     console.log("k :",k,"n :",n);
     if(k<n)
