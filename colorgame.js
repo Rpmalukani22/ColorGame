@@ -1,9 +1,12 @@
 var x=[]
+var size=6;
 var y=document.querySelectorAll(".rect");
 var pickedcolor="";
 var message=document.getElementById("result");
 var putQuestion=document.getElementById("question");
+var lvl=document.querySelectorAll(".level");
 generate=(x,y,n)=>{
+  window.lvl[2].textContent="New colours!"
   window.pickedcolor="";
   window.message.textContent="";
   x=[]
@@ -28,7 +31,8 @@ i.addEventListener('click',()=>{
   {
   //message success
   console.log(n);
-  message.textContent="Correct!!Select level to play again."
+  message.textContent="Correct!!"
+  window.lvl[2].textContent="Play again?"
   for(let k=0;k<6;k++){
     console.log("k :",k,"n :",n);
     if(k<n)
@@ -50,8 +54,8 @@ else{
 return x;
 }
 x=generate(x,y,6);
-var lvl=document.querySelectorAll(".level");
 console.log(lvl);
-lvl[0].addEventListener('click',()=>{x=generate(x,y,3);console.log(x);});
-lvl[1].addEventListener('click',()=>{x=generate(x,y,6);console.log(x);});
+lvl[0].addEventListener('click',()=>{window.size=3;x=generate(x,y,window.size);console.log(x);});
+lvl[1].addEventListener('click',()=>{window.size=6;x=generate(x,y,window.size);console.log(x);});
+lvl[2].addEventListener('click',()=>{x=generate(x,y,window.size);console.log(x);});
 console.log(x);
