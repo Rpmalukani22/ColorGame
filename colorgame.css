@@ -1,7 +1,9 @@
 body{
   background: #000;
+  color:white;
 }
 .rect{
+  visibility: hidden;
   background: green;
   width:30%;
   padding-top: 30%;
@@ -14,7 +16,11 @@ max-width: 40%;
 }
 h1{
   color:white;
+  text-align: center;
 }
-span{
-  color: white;
+#decorate{
+  text-align: center;
+}
+.level{
+  margin: 5px;
 }
