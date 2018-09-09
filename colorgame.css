@@ -3,13 +3,13 @@ body{
   color:white;
 }
 .rect{
-  visibility: hidden;
   background: green;
   width:30%;
   padding-top: 30%;
   margin:1.667%;
   float: left;
-  border-radius: 25px;
+  border-radius: 15%;
+  transition: background-color 0.5s;
 }
 .container{
 margin: 0 auto;
@@ -40,9 +40,12 @@ h1{
   background-color: white;
   font-weight: 900;
   text-transform: uppercase;
+  display: inline-block;
+  width:auto;
 }
 button{
  outline: none !important;
+ transition: all 0.5s;
 }
 #question{
   font-size: 200%;
