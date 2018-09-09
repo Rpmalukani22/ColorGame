@@ -6,23 +6,32 @@ var message=document.getElementById("result");
 var putQuestion=document.getElementById("question");
 var lvl=document.querySelectorAll(".level");
 var h1=document.querySelector("h1");
-
+var lst1=[],lst2=[];
 changeclr=(n)=>{
   if(n===3)
   {
-    window.lvl[0].style.backgroundColor=h1.style.backgroundColor;
-    window.lvl[1].style.backgroundColor=window.lvl[2].style.backgroundColor;
+    window.lvl[1].style.backgroundColor=h1.style.backgroundColor;
+    window.lvl[1].style.color="white";
+    window.lvl[2].style.backgroundColor=window.lvl[0].style.backgroundColor;
+    window.lvl[2].style.color=window.h1.style.backgroundColor;
+    window.lvl[0].style.color=window.h1.style.backgroundColor;
+
   }
   else{
-    window.lvl[1].style.backgroundColor=h1.style.backgroundColor;
-    window.lvl[0].style.backgroundColor=window.lvl[2].style.backgroundColor;
+    window.lvl[2].style.backgroundColor=h1.style.backgroundColor;
+    window.lvl[2].style.color="white";
+    window.lvl[1].style.backgroundColor=window.lvl[0].style.backgroundColor;
+    window.lvl[1].style.color=window.h1.style.backgroundColor;
+    window.lvl[0].style.color=window.h1.style.backgroundColor;
   }
 }
 generate=(x,y,n)=>{
-  h1.style.backgroundColor="lightblue";
+  h1.style.backgroundColor="steelblue";
+  window.lvl[1].style.color=h1.style.backgroundColor;
+  window.lvl[2].style.color=h1.style.backgroundColor;
+  window.lvl[0].style.color=h1.style.backgroundColor;
   changeclr(n);
-  h1.style.backgroundColor="lightblue";
-  window.lvl[2].textContent="New colours!"
+  window.lvl[0].textContent="New colours!"
   window.pickedcolor="";
   window.message.textContent="";
   x=[]
@@ -48,7 +57,7 @@ i.addEventListener('click',()=>{
   //message success
   console.log(n);
   message.textContent="Correct!!"
-  window.lvl[2].textContent="Play again?"
+  window.lvl[0].textContent="Play again?"
   for(let k=0;k<6;k++){
     console.log("k :",k,"n :",n);
     if(k<n)
@@ -73,7 +82,7 @@ return x;
 }
 x=generate(x,y,6);
 console.log(lvl);
-lvl[0].addEventListener('click',()=>{;window.size=3;x=generate(x,y,window.size);console.log(x);});
-lvl[1].addEventListener('click',()=>{window.size=6;x=generate(x,y,window.size);console.log(x);});
-lvl[2].addEventListener('click',()=>{x=generate(x,y,window.size);console.log(x);});
+lvl[1].addEventListener('click',()=>{window.size=3;x=generate(x,y,window.size);console.log(x);});
+lvl[2].addEventListener('click',()=>{window.size=6;x=generate(x,y,window.size);console.log(x);});
+lvl[0].addEventListener('click',()=>{x=generate(x,y,window.size);console.log(x);});
 console.log(x);

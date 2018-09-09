@@ -18,9 +18,13 @@ max-width: 40%;
 h1{
   color:white;
   text-align: center;
-  height:100px;
   margin-bottom: 0;
   margin-top: 0;
+  text-transform: uppercase;
+  font-family: "Montserrat","Avenir";
+  font-weight: normal;
+  line-height: 1.1;
+  padding:20px 0;
 }
 #decorate{
   text-align: center;
@@ -34,7 +38,20 @@ h1{
   text-align: center;
   border: 0;
   background-color: white;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 button{
  outline: none !important;
+}
+#question{
+  font-size: 200%;
+}
+#result{
+  display: inline-block;
+  width: 15%;
+}
+button.level:hover {
+  background-color: steelblue;
+  color: white !important;
 }
