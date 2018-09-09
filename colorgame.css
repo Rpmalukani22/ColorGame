@@ -32,6 +32,9 @@ h1{
   margin:0 5px 0 5px;
   height: 100%;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
+  border: 0;
+  background-color: white;
+}
+button{
+ outline: none !important;
 }
